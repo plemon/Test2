@@ -82,7 +82,9 @@ namespace WebApplication.Data.Migrations
 
                     b.Property<string>("ProviderDisplayName");
 
-                    
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
                     b.HasKey("LoginProvider", "ProviderKey");
 
                     b.HasIndex("UserId");
